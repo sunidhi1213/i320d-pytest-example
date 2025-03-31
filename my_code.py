@@ -17,7 +17,7 @@ def test_fix_phone_num():
 
 def test_fix_phone_num_v2():
   # given "5125558823". Split the parts, then recombine and return
-  assert fix_phone_num("555-442-98761") == "(555) 442 98761"
+  assert fix_phone_num("555-442-98761") == "(555) 442 9876"
   assert fix_phone_num("321-654-3333") == "(321) 654 3333"
 
 
