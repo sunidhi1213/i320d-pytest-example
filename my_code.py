@@ -20,6 +20,16 @@ def test_fix_phone_num_v2():
   assert fix_phone_num("555-442-98761") == "(555) 442 9876"
   assert fix_phone_num("321-654-3333") == "(321) 654 3333"
 
+def test_raiseError_wrongChar():
+  with pytest.raises(ValueError):
+    fix_phone_num("sun-yay-dirt")
+
+def test_raiseError_wrongNum():
+  with pytest.raises(ValueError):
+    fix_phone_num("5125558")
+
+
+
 
   
 
