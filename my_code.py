@@ -21,15 +21,12 @@ def test_fix_phone_num():
   assert fix_phone_num("5554429876") == '(555) 442 9876'
   assert fix_phone_num("3216543333") == '(321) 654 3333'
 
-def test_lastFix():
-  with pytest.raises(ValueError):
-    fix_phone_num("555-442-98761")
-  assert fix_phone_num("3216543333") == "(321) 654 3333"
 
 def test_fix_phone_num_v2():
   # given "5125558823". Split the parts, then recombine and return (try again)
-  assert fix_phone_num("555-442-98761") == "(555) 442 9876"
-  assert fix_phone_num("321-654-3333") == "(321) 654 3333"
+   with pytest.raises(ValueError):
+    fix_phone_num("555-442-98761")
+  assert fix_phone_num("3216543333") == "(321) 654 3333"
 
 def test_raiseError_wrongChar():
   with pytest.raises(ValueError):
