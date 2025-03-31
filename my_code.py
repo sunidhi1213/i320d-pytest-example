@@ -37,7 +37,9 @@ def test_raiseError_wrongChar():
 
 def test_raiseError_wrongNum():
   with pytest.raises(ValueError):
-    fix_phone_num("5125558")
+    fix_phone_num("5125558") #short
+  with pytest.raises(ValueError):
+    fix_phone_num("555-442-98761") #long
 
 
 
