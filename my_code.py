@@ -24,9 +24,11 @@ def test_fix_phone_num():
 
 def test_fix_phone_num_v2():
   # given "5125558823". Split the parts, then recombine and return (try again)
-   with pytest.raises(ValueError):
+  with pytest.raises(ValueError):
     fix_phone_num("555-442-98761")
   assert fix_phone_num("3216543333") == "(321) 654 3333"
+   
+     
 
 def test_raiseError_wrongChar():
   with pytest.raises(ValueError):
